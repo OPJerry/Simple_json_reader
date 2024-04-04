@@ -12,7 +12,7 @@ def verify_json(file_path):
             
 
 def main():
-    path = r'C:\Users\Jerry\Desktop\Projekty\Simple_json_reader\example.json'
+    path = r'XXX'
     print(verify_json(path))
     
 
