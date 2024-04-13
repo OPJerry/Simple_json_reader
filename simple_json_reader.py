@@ -13,6 +13,15 @@ def verify_json(file_path):
     """
     with open(file_path, 'r') as f:
         data = json.load(f)
+        pd = data['PolicyDocument']
+        if_statement = pd['Statement']
+        unpak_list = if_statement[0]
+        iam = unpak_list['Action']
+        check_aim = any('iam' in _ for _ in iam)
+        if check_aim:
+            print('jest')
+        else:
+            print('nie jest')
         if 'Statement' in data['PolicyDocument']:
             for statement in data['PolicyDocument']['Statement']:
                 if 'Resource' in statement and statement['Resource'] == '*':
@@ -21,7 +30,7 @@ def verify_json(file_path):
             
 
 def main():
-    path = r'XXX'
+    path = r'C:\Users\jerem\Desktop\Projekty git\json\Simple_json_reader\example.json'
     print(verify_json(path))
     
 
