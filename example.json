@@ -7,8 +7,8 @@
                 "Sid": "IamListAccess",
                 "Effect": "Allow",
                 "Action": [
-                    "im:ListRoles",
-                    "im:ListUsers"
+                    "iam:ListRoles",
+                    "iam:ListUsers"
                 ],
                 "Resource": "*"
             }
