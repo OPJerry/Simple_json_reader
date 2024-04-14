@@ -87,7 +87,7 @@ def main():
     Printed JSON file
     With marked Bool values of Resource accordingly to the conditions. 
     """
-    file_path = r'XXX'
+    file_path = r'C:\Users\jerem\Desktop\Projekty git\json\Simple_json_reader\example.json'
     data = get_data_from_file(file_path)
 
     pydantic_item = Resource(**data)  
